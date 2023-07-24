@@ -17,7 +17,7 @@
        {% block content %}
          {% for article in article_list %}
              <div class="article">
-             <h3><a href="">{{ article.title }}</a></h3>
+             <h3><a href="{% url 'detail' article.pk %}">{{ article.title }}</a></h3>
                <p>{{ article.body }}</p>
             </div>
          {% endfor %}
